@@ -353,8 +353,15 @@ document.addEventListener("DOMContentLoaded", () => {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  max-height: 80vh;
+  max-height: 95vh; /* 讓桌機時圖片更大一點 */
   object-fit: cover;
+  object-position: top center; /* 往上對齊，減少臉被截掉 */
+}
+
+@media (max-width: 768px) {
+  #main-photo {
+    object-position: center; /* 手機維持居中 */
+  }
 }
 
 
