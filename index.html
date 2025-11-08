@@ -514,24 +514,24 @@ document.addEventListener("DOMContentLoaded", () => {
   </article>
 </section>
 
-<!-- 花籃訂購區 -->
+<!-- 🌸 花籃訂購區 -->
 <section id="donate-flower">
   <h3><strong>統一致贈花籃，送上祝福</strong></h3>
-  <p><strong>選擇花籃樣式，點選以下LINE與我們聯繫。</strong></p>
-  <a href="https://line.me/ti/p/nZJmE8-b6X" target="_blank" class="btn-order"><strong>加入 LINE 訂購</strong></a>
-  <a href="javascript:void(0);" id="show-flower-baskets" class="btn"><strong>顯示花籃樣式 🌹</strong></a>
+  <p>選擇花籃樣式，點選以下 LINE 與我們聯繫。</p>
+  <a href="https://line.me/ti/p/nZJmE8-b6X" target="_blank" class="btn-order">加入 LINE 訂購</a>
+  <a href="javascript:void(0);" id="show-flower-baskets" class="btn">顯示花籃樣式 🌹</a>
 </section>
 
 <!-- 花籃畫廊 -->
 <div id="flower-basket-gallery">
-  <div class="zoomable"><img src="image/花籃A款.JPG" alt="花籃A"><p class="price"><strong>A款NT$2,500/對</strong></p></div>
-  <div class="zoomable"><img src="image/花籃B款.JPG" alt="花籃B"><p class="price"><strong>B款NT$3,000/對</strong></p></div>
-  <div class="zoomable"><img src="image/花籃C款.JPG" alt="花籃C"><p class="price"><strong>C款NT$3,500/對</strong></p></div>
-  <div class="zoomable"><img src="image/花籃D款.JPG" alt="花籃D"><p class="price"><strong>D款NT$4,500/對</strong></p></div>
-  <div class="zoomable"><img src="image/花籃E款.JPG" alt="花籃E"><p class="price"><strong>E款NT$5,000/對</strong></p></div>
-  <div class="zoomable"><img src="image/花籃F款.JPG" alt="花籃F"><p class="price"><strong>F款NT$5,500/對</strong></p></div>
-  <div class="zoomable"><img src="image/花籃G款.JPG" alt="花籃G"><p class="price"><strong>G款NT$6,000/對</strong></p></div>
-  <div class="zoomable"><img src="image/花籃H款.JPG" alt="花籃H"><p class="price"><strong>H款NT$6,500/對</strong></p></div>
+  <div class="zoomable"><img src="image/花籃A款.JPG" alt="花籃A"><p class="price">A款 NT$2,500 / 對</p></div>
+  <div class="zoomable"><img src="image/花籃B款.JPG" alt="花籃B"><p class="price">B款 NT$3,000 / 對</p></div>
+  <div class="zoomable"><img src="image/花籃C款.JPG" alt="花籃C"><p class="price">C款 NT$3,500 / 對</p></div>
+  <div class="zoomable"><img src="image/花籃D款.JPG" alt="花籃D"><p class="price">D款 NT$4,500 / 對</p></div>
+  <div class="zoomable"><img src="image/花籃E款.JPG" alt="花籃E"><p class="price">E款 NT$5,000 / 對</p></div>
+  <div class="zoomable"><img src="image/花籃F款.JPG" alt="花籃F"><p class="price">F款 NT$5,500 / 對</p></div>
+  <div class="zoomable"><img src="image/花籃G款.JPG" alt="花籃G"><p class="price">G款 NT$6,000 / 對</p></div>
+  <div class="zoomable"><img src="image/花籃H款.JPG" alt="花籃H"><p class="price">H款 NT$6,500 / 對</p></div>
 </div>
 
 <!-- 放大圖層 -->
@@ -550,7 +550,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- 分享按鈕區 -->
 <section id="share-buttons">
-  <h2><strong>分享此頁面</strong></h2>
+  <h2>分享此頁面</h2>
   <div class="share-btns">
     <a href="#" target="_blank" class="share-btn fb-share-btn" aria-label="Share on Facebook"><img src="image/fb.png" alt="Share on Facebook"></a>
     <a href="#" target="_blank" class="share-btn line-share-btn" aria-label="Share on Line"><img src="image/line.png" alt="Share on Line"></a>
@@ -561,129 +561,221 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- CSS -->
 <!-- ========================= -->
 <style>
-/* ----------- 感謝信息區 ----------- */
-.remembrance-thanks {
-  font-family: 'Iansui','Noto Serif TC', serif;
-  padding: 40px 20px;
-  text-align: center;
-  line-height: 1.9;
-  background: linear-gradient(to bottom, #fffdf8, #f7f5f0);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  margin-bottom: 30px;
+body {
+  font-family: 'Iansui', 'Noto Serif TC', '微軟正黑體', serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
-.remembrance-thanks p {
-  font-size: clamp(18px,2.5vw,26px);
-  margin: 12px 0;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-.remembrance-thanks p.visible { opacity: 1; transform: translateY(0); }
-.remembrance-thanks p strong { color: #8b5e3c; }
 
 /* ----------- 花籃訂購區 ----------- */
-#donate-flower { text-align:center; margin:20px auto; max-width:500px; padding:20px; border:3px solid #005bb5; border-radius:12px; background-color:#e6f2ff; box-shadow:0 6px 12px rgba(0,0,0,0.15); }
-#donate-flower h3 { font-family:'辰魚落雁體','Noto Serif TC', serif; font-size:28px; color:#00274d; margin-bottom:10px; }
-#donate-flower p { font-size:19px; color:#333; margin-bottom:15px; }
-.btn, .btn-order { display:inline-block; padding:10px 25px; font-size:18px; color:#fff; background-color:#0077e6; border:none; border-radius:6px; text-decoration:none; box-shadow:0 4px 8px rgba(0,0,0,0.1); transition:all 0.3s ease; margin-top:10px; }
-.btn:hover, .btn-order:hover { background-color:#005bb5; transform:translateY(-3px); box-shadow:0 6px 12px rgba(0,0,0,0.2); }
+#donate-flower {
+  text-align: center;
+  margin: 40px auto 20px;
+  max-width: 600px;
+  padding: 25px 20px;
+  border: 2px solid #005bb5;
+  border-radius: 12px;
+  background-color: #f9fbff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+#donate-flower h3 {
+  font-size: 28px;
+  color: #00274d;
+  margin-bottom: 10px;
+}
+#donate-flower p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.btn, .btn-order {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #0077e6;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  margin: 6px;
+}
+.btn:hover, .btn-order:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
 
 /* ----------- 花籃畫廊 ----------- */
-#flower-basket-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:18px; margin-top:20px; opacity:0; max-height:0; overflow:hidden; transition:max-height 0.6s ease, opacity 0.6s ease; }
-#flower-basket-gallery.show { opacity:1; max-height:2000px; }
-.zoomable { text-align:center; }
-.zoomable img { width:100%; border:2px solid #ccc; border-radius:8px; cursor:zoom-in; transition:transform 0.3s ease, box-shadow 0.3s ease; }
-.zoomable img:hover { transform:scale(1.05); box-shadow:0 6px 14px rgba(0,0,0,0.2); }
-.price { margin-top:10px; font-size:16px; color:#444; }
+#flower-basket-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  margin: 25px auto;
+  padding: 0 10px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+#flower-basket-gallery.show {
+  opacity: 1;
+  max-height: 2000px;
+}
+.zoomable { text-align: center; }
+.zoomable img {
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.zoomable img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.price {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+}
 
-/* 放大圖層 */
-#image-overlay { position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); display:none; justify-content:center; align-items:center; z-index:9999; }
-#image-overlay img { max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 0 20px rgba(255,255,255,0.3); transition:transform 0.3s; }
+/* ----------- 放大圖層 ----------- */
+#image-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#image-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
 
 /* ----------- 固定聯絡按鈕 ----------- */
-#fixed-links { position:fixed; bottom:10px; right:10px; display:flex; gap:10px; align-items:center; z-index:1000; }
-#fixed-links img { width:auto; height:auto; max-width:70px; max-height:50px; border-radius:5px; }
+#fixed-links {
+  position: fixed;
+  bottom: 10px; right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+}
+#fixed-links img {
+  width: 70px;
+  height: auto;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+#fixed-links img:hover {
+  transform: scale(1.1);
+}
 
 /* ----------- 名片 ----------- */
-#business-card { text-align:center; margin:20px auto; }
-.business-card-img { max-width:500px; width:100%; height:auto; margin-bottom:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); cursor:pointer; transition:transform 0.3s ease; }
-.business-card-img:active { transform:scale(1.05); }
+#business-card {
+  text-align: center;
+  margin: 30px auto;
+}
+.business-card-img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.business-card-img:hover { transform: scale(1.02); }
 
 /* ----------- 分享按鈕 ----------- */
-#share-buttons { text-align:center; margin:10px auto; }
-.share-btns { display:flex; justify-content:center; gap:15px; }
-.share-btn { display:inline-block; width:50px; height:50px; transition:transform 0.3s ease, box-shadow 0.3s ease; }
-.share-btn img { width:100%; height:auto; border-radius:50%; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
-.share-btn:hover { transform:scale(1.1); box-shadow:0 6px 12px rgba(0,0,0,0.2); }
+#share-buttons {
+  text-align: center;
+  margin: 30px auto;
+}
+#share-buttons h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #333;
+}
+.share-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.share-btn img {
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.share-btn img:hover {
+  transform: scale(1.1);
+}
 
 /* 響應式 */
-@media(max-width:768px){.business-card-img{max-width:450px;}.share-btn{width:40px;height:40px;}}
-@media(max-width:500px){.share-btns{flex-wrap:wrap;}.business-card-img{max-width:380px;}}
+@media(max-width:600px){
+  #donate-flower{max-width:90%;padding:18px;}
+  .business-card-img{max-width:95%;}
+  .share-btn img{width:42px;}
+}
 </style>
 
 <!-- ========================= -->
 <!-- JS -->
 <!-- ========================= -->
 <script>
-// ---------- 文字淡入 ----------
-document.addEventListener("DOMContentLoaded", () => {
-  const texts = document.querySelectorAll('.remembrance-thanks p');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        texts.forEach((el,i)=>setTimeout(()=>el.classList.add('visible'), i*400));
-      }
-    });
-  }, {threshold:0.1});
-  texts.forEach(el => observer.observe(el));
-});
-
-// ---------- 花籃畫廊展開 ----------
 document.getElementById('show-flower-baskets').addEventListener('click', function () {
   const gallery = document.getElementById('flower-basket-gallery');
   gallery.classList.toggle('show');
-  this.innerHTML = gallery.classList.contains('show') 
-    ? '<strong>隱藏花籃樣式 🌹</strong>' 
-    : '<strong>顯示花籃樣式 🌹</strong>';
+  this.innerHTML = gallery.classList.contains('show')
+    ? '隱藏花籃樣式 🌹'
+    : '顯示花籃樣式 🌹';
 });
 
-// ---------- 點擊放大圖片 ----------
-document.querySelectorAll('.zoomable img').forEach(img=>{
-  img.addEventListener('click', function(){
+// 點擊圖片放大
+document.querySelectorAll('.zoomable img').forEach(img => {
+  img.addEventListener('click', () => {
     const overlay = document.getElementById('image-overlay');
     const overlayImg = document.getElementById('overlay-img');
-    overlayImg.src = this.src;
+    overlayImg.src = img.src;
     overlay.style.display = 'flex';
   });
 });
-document.getElementById('image-overlay').addEventListener('click', function(){ this.style.display='none'; });
+document.getElementById('image-overlay').addEventListener('click', () => {
+  document.getElementById('image-overlay').style.display = 'none';
+});
 
-// ---------- 名片點擊放大 ----------
+// 名片點擊放大
 const cardImg = document.querySelector(".business-card-img");
-if(cardImg){
-  cardImg.addEventListener("click", function(){
+if (cardImg) {
+  cardImg.addEventListener("click", () => {
     const modal = document.createElement("div");
-    modal.style.position="fixed"; modal.style.top="0"; modal.style.left="0"; modal.style.width="100vw"; modal.style.height="100vh";
-    modal.style.backgroundColor="rgba(0,0,0,0.8)"; modal.style.display="flex"; modal.style.alignItems="center"; modal.style.justifyContent="center"; modal.style.zIndex="1000";
-    const img = document.createElement("img"); img.src=cardImg.src; img.alt=cardImg.alt;
-    img.style.maxWidth="90%"; img.style.maxHeight="90%"; img.style.borderRadius="10px"; img.style.boxShadow="0 4px 8px rgba(0,0,0,0.5)"; img.style.cursor="pointer";
-    modal.appendChild(img); document.body.appendChild(modal);
-    modal.addEventListener("click",()=>document.body.removeChild(modal));
+    modal.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:10000;";
+    const img = document.createElement("img");
+    img.src = cardImg.src;
+    img.style.cssText = "max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 4px 20px rgba(255,255,255,0.3);cursor:pointer;";
+    modal.appendChild(img);
+    document.body.appendChild(modal);
+    modal.addEventListener("click", () => document.body.removeChild(modal));
   });
 }
 
-// ---------- 分享按鈕 URL ----------
-document.addEventListener("DOMContentLoaded", function () {
+// 分享按鈕
+document.addEventListener("DOMContentLoaded", () => {
   let url = new URL(window.location.href);
   url.searchParams.delete("fbclid");
   url.searchParams.delete("utm_source");
   url.searchParams.delete("utm_medium");
   url.searchParams.delete("utm_campaign");
-  if(url.hostname.includes("xn--")) url.hostname="24hour.台灣";
+  if (url.hostname.includes("xn--")) url.hostname = "24hour.台灣";
   let encodedUrl = encodeURIComponent(url.toString());
-  document.querySelector(".fb-share-btn").href="https://www.facebook.com/sharer/sharer.php?u="+encodedUrl;
-  document.querySelector(".line-share-btn").href="https://line.me/R/msg/text/?"+encodedUrl;
+  document.querySelector(".fb-share-btn").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodedUrl;
+  document.querySelector(".line-share-btn").href = "https://line.me/R/msg/text/?" + encodedUrl;
 });
 </script>
        
