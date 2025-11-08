@@ -828,130 +828,220 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
 
         
 
-<section id="funeral-notice">
-  <h4 class="notice-title">
-    🕯️ 參加喪禮<br>國曆 2024.11.13（四）
-  </h4>
-  <ul class="notice-list">
-    <li><span class="bullet">🔹</span> 請來賓著整齊、樸素服裝，包鞋至會場致意即可。</li>
-    <li><span class="bullet">🔹</span> 建議提前十分鐘抵達會場，並配合會場安排。</li>
-    <li><span class="bullet">🔹</span> 請將手機調為靜音或關機，避免影響儀式進行。</li>
-    <li><span class="bullet">🔹</span> 儀式中請依工作人員指引，依序行禮或致意。</li>
-    <li><span class="bullet">🔹</span> 離場勿說「再見」，以「平安、謝謝」代替。</li>
-    <li>
-      <span class="bullet">🔹</span> 統一佈置會場，致贈花籃，請聯繫陳先生：
-      <span class="contact-buttons">
-        <a href="tel:0938179858" class="contact-btn phone">📞 0938-179-858</a>
-        <a href="https://line.me/ti/p/nZJmE8-b6X" class="contact-btn line">💬 LINE 聯繫</a>
-      </span>
-    </li>
-  </ul>
+<section class="funeral-attend">
+  <!-- 標題區 -->
+  <div class="attend-header">
+    <img src="image/candle.png" alt="燭光" class="attend-candle" loading="lazy">
+    <h2>參加喪禮</h2>
+  </div>
+
+  <!-- 基本資訊 -->
+  <div class="attend-info">
+    <p>🗓️ <strong>國曆：</strong>2024 年 11 月 10 日（日）</p>
+    <p>🌙 <strong>農曆：</strong>十月初十日</p>
+    <p>🔹 <strong>當日正沖：</strong>民國 86 年次（屬牛）</p>
+    <p>📍 <strong>地點：</strong>第二殯儀館 景行樓 1F 至忠四廳</p>
+  </div>
+
+  <!-- 分隔線 -->
+  <hr class="attend-divider">
+
+  <!-- 注意事項 -->
+  <div class="attend-notice">
+    <p>請來賓著整齊、樸素深色服裝，以表尊敬與追思之意。</p>
+    <p>敬請提早抵達，並依現場引導入座。</p>
+    <p>儀式期間請將手機調為靜音或關機，並遵從工作人員指引。</p>
+  </div>
+
+  <!-- 分隔線 -->
+  <hr class="attend-divider">
+
+  <!-- 花籃公告 -->
+  <div class="flower-section">
+    <h3>🌸 花籃公告</h3>
+    <p>為維持會場整齊與統一，花籃將由禮儀師統一製作，敬請配合。</p>
+  </div>
+
+  <!-- 聯絡資訊 -->
+  <div class="attend-contact">
+    <p class="contact-title">請洽：</p>
+    <p class="contact-name">禮儀師 陳柏元</p>
+    <div class="contact-btns">
+      <a href="tel:0938179858" class="contact-btn phone">📞 0938-179-858</a>
+      <a href="https://line.me/ti/p/nZJmE8-b6X" target="_blank" class="contact-btn line">💬 LINE 聯繫</a>
+    </div>
+    <div class="qr-box">
+      <img src="image/lineQR.png" alt="LINE QR Code" class="line-qr" loading="lazy">
+      <p class="qr-hint">掃描加入聯繫</p>
+    </div>
+  </div>
 </section>
 
 <style>
-#funeral-notice {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 30px 35px;
-  max-width: 950px;
-  margin: 30px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  font-family: "ChenYu", "Iansui", "Noto Sans TC", "微軟正黑體", sans-serif;
-}
-
-.notice-title {
-   font-family: 'ChenYu', 'Iansui', 'Noto Serif TC', serif; /* 先套用芫荽體，備援 Noto Serif TC */
-  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
-  color: #2a2a2a;
+/* 整體區塊 */
+.funeral-attend {
+  font-family: 'Iansui', 'Noto Serif TC', serif;
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 36px 24px;
   text-align: center;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #c49b57;
-  padding-bottom: 6px;
-  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #fffdfa, #fff7ed);
+  border: 2px solid #d9c3a3;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-.notice-list {
-  font-family: 'ChenYu', 'Iansui', 'Noto Serif TC', serif; /* 先套用芫荽體，備援 Noto Serif TC */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.notice-list li {
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  color: #444444;
-  line-height: 1.8;
-  margin-bottom: 12px;
+/* 標題區 */
+.attend-header {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.attend-candle {
+  width: 48px;
+  margin-bottom: 8px;
+  animation: floatCandle 2.5s ease-in-out infinite alternate;
+}
+.attend-header h2 {
+  font-size: clamp(24px, 4vw, 30px);
+  color: #3d2b1f;
+  letter-spacing: 2px;
+  margin: 0;
+  font-weight: 700;
 }
 
-.notice-list .bullet {
-  flex: 0 0 25px; /* 固定符號寬度保持對齊 */
-  display: inline-block;
+/* 基本資訊 */
+.attend-info p {
+  font-size: clamp(16px, 2.5vw, 18px);
+  margin: 6px 0;
+  color: #333;
 }
 
-/* 聯絡方式按鈕 */
-.contact-buttons {
-  display: inline-flex;
-  gap: 10px;
-  margin-left: 5px;
-  flex-wrap: wrap; 
+/* 分隔線 */
+.attend-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c8a97e, transparent);
+  width: 84%;
+  margin: 24px auto;
+  border-radius: 2px;
 }
 
+/* 注意事項 */
+.attend-notice p {
+  font-size: clamp(16px, 2.5vw, 18px);
+  margin: 6px 0;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* 花籃公告 */
+.flower-section {
+  margin: 22px 0;
+}
+.flower-section h3 {
+  font-size: clamp(18px, 3vw, 22px);
+  color: #4a3b2b;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.flower-section p {
+  font-size: clamp(16px, 2.4vw, 18px);
+  margin: 4px 0;
+  color: #555;
+}
+
+/* 聯絡資訊 */
+.attend-contact {
+  margin-top: 24px;
+}
+.contact-title {
+  font-weight: 700;
+  font-size: clamp(17px, 2.6vw, 19px);
+  color: #3a2a19;
+}
+.contact-name {
+  font-size: clamp(17px, 2.6vw, 19px);
+  color: #3a2a19;
+  margin: 6px 0 14px;
+}
+.contact-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
 .contact-btn {
   display: inline-block;
-  text-decoration: none;
-  padding: 6px 14px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #4a90e2, #357ab8);
   color: #fff;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-.contact-btn.phone {
-  background: linear-gradient(135deg, #6a9cfb, #3571d3);
-  white-space: nowrap;
+  text-decoration: none;
+  padding: 10px 26px;
+  border-radius: 10px;
+  font-size: clamp(15px, 2.5vw, 18px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .contact-btn.phone:hover {
-  background: linear-gradient(135deg, #4e7fd1, #2750a8);
-  transform: translateY(-1px);
+  transform: scale(1.05);
+  opacity: 0.95;
 }
-
 .contact-btn.line {
-  background: linear-gradient(135deg, #00c300, #008f00);
+  background: linear-gradient(90deg, #00c300, #009900);
 }
 .contact-btn.line:hover {
-  background: linear-gradient(135deg, #00a800, #006f00);
-  transform: translateY(-1px);
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* QR Code */
+.qr-box {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.line-qr {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e0d5c2;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  transition: transform 0.2s ease;
+}
+.line-qr:hover {
+  transform: scale(1.05);
+}
+.qr-hint {
+  font-size: clamp(14px, 2vw, 16px);
+  margin-top: 6px;
+  color: #555;
+}
+
+/* 小動畫 */
+@keyframes floatCandle {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-6px); }
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* 響應式 */
-@media (max-width: 768px) {
-  #funeral-notice {
-    padding: 22px 18px;
+@media (max-width: 480px) {
+  .funeral-attend {
+    padding: 28px 16px 32px;
   }
-  .notice-title {
-    font-size: clamp(1.3rem, 4vw, 1.6rem);
-  }
-  .notice-list li {
-    font-size: clamp(0.95rem, 3.5vw, 1rem);
-  }
-  .contact-buttons {
+  .contact-btns {
+    gap: 8px;
     flex-direction: column;
-    gap: 6px;
-  }
-  .contact-btn {
-    font-size: 0.95rem;
-    padding: 6px 10px;
   }
 }
 </style>
-
-              
 
 <div>
 <!-- 页脚 -->
