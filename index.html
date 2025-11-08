@@ -830,8 +830,7 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
 
 <section class="funeral-attend">
   <!-- 標題區 -->
-  <div class="attend-header">
-    <img src="image/candle.png" alt="燭光" class="attend-candle" loading="lazy">
+  <div class="attend-header"> 
     <h2>參加喪禮</h2>
   </div>
 
@@ -842,25 +841,22 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
     <p>📍 <strong>地點：</strong>第二殯儀館 景行樓 1F 至忠四廳</p>
   </div>
 
-  <!-- 分隔線 -->
-  <hr class="attend-divider">
-
   <!-- 注意事項 -->
   <div class="attend-notice">
-    <p>請著整齊、樸素深色服裝、包鞋，以表尊敬與追思之意。</p>
-    <p>儀式期間請將手機調為靜音或關機。</p>
-    <p>殯儀館內請勿「再見、掰掰」，以「平安」代替即可。</p>
-    <p>會場門口備有淨水，來賓可以洗淨後再離場。</p>
-    <p>以一般習俗奠拜，若來賓因宗教信仰不持香，可以與工作人員示意。</p>
+    <h3>⚠️ 注意事項</h3>
+    <ul>
+      <li>請著整齊、樸素深色服裝、包鞋，以表尊敬與追思之意。</li>
+      <li>儀式期間請將手機調為靜音或關機。</li>
+      <li>殯儀館內請勿「再見、掰掰」，以「平安」代替即可。</li>
+      <li>會場門口備有淨水，來賓可洗淨後再離場。</li>
+      <li>以一般習俗奠拜，若來賓因宗教信仰不持香，可與工作人員示意。</li>
+    </ul>
   </div>
-
-  <!-- 分隔線 -->
-  <hr class="attend-divider">
 
   <!-- 花籃公告 -->
   <div class="flower-section">
     <h3>🌸 花籃公告</h3>
-    <p>為維持會場整齊，統一製作花籃。</p>
+    <p>為維持會場整齊，統一製作花籃，敬請配合。</p>
   </div>
 
   <!-- 聯絡資訊 -->
@@ -882,7 +878,7 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
   margin: 40px auto;
   padding: 36px 24px;
   text-align: center;
-  background: linear-gradient(135deg, #fffdfa, #fff7ed);
+  background-color: #ffffff;
   border: 2px solid #d9c3a3;
   border-radius: 14px;
   box-shadow: 0 6px 22px rgba(0,0,0,0.08);
@@ -916,22 +912,26 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
   color: #333;
 }
 
-/* 分隔線 */
-.attend-divider {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #c8a97e, transparent);
-  width: 84%;
-  margin: 24px auto;
-  border-radius: 2px;
-}
-
 /* 注意事項 */
-.attend-notice p {
+.attend-notice {
+  text-align: left;
+  margin: 20px 0;
+}
+.attend-notice h3 {
+  font-size: clamp(18px, 3vw, 22px);
+  color: #4a3b2b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.attend-notice ul {
+  padding-left: 20px;
+  margin: 0;
+}
+.attend-notice ul li {
   font-size: clamp(16px, 2.5vw, 18px);
-  margin: 6px 0;
-  color: #444;
+  margin-bottom: 8px;
   line-height: 1.8;
+  color: #444;
 }
 
 /* 花籃公告 */
@@ -946,7 +946,6 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
 }
 .flower-section p {
   font-size: clamp(16px, 2.4vw, 18px);
-  margin: 4px 0;
   color: #555;
 }
 
@@ -994,7 +993,6 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
   opacity: 0.95;
 }
 
-
 /* 小動畫 */
 @keyframes floatCandle {
   0% { transform: translateY(0px); }
@@ -1016,7 +1014,6 @@ document.querySelectorAll(".image-gallery img").forEach(img => {
   }
 }
 </style>
-
 <div>
 <!-- 页脚 -->
 <footer style="background-color: #f3f3f3; padding: 20px 0; text-align: center; font-family: Arial, sans-serif;">
